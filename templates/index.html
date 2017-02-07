@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TrackBot control</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+        text-align: center;
+        min-width: 500px;
+      }
+      #compassContainer {
+        position:absolute;
+        width:200px;
+        height:200px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="static/joy.js"></script>
+  </head>
+  <body>
+    <h1>TrackBot control</h1>
+    <div id="compassContainer">
+    <svg viewBox="0, 0, 100, 100">
+      <g id="compass">
+        <circle id="compassBody" cx="50" cy="50" r="48" style="fill: white; stroke: black;" />
+      </g>
+      <g id="needle">
+        <polygon id="needleBody" points="50,98 60,50 50,2 40,50" style="fill: black;" />
+        <polygon id="needleTip" points="50,2 55,25 45,25" style="fill: red;" />
+        <text x="50" y="20" font-family="Arial" font-size=".5em" text-anchor="middle">N</text>
+        <circle id="needleCenter" cx="50" cy="50" r="3" style="fill: white;" />
+      </g>
+    </svg>
+    </div>
+    <div id="log" style="overflow:scroll;width:500px; height:100px;background-color:#ffeeaa; margin:auto; text-align:left"></div>
+    <div id="log2" style="overflow:scroll;width:600px; height:200px;background-color:#ffeeaa; margin:auto; text-align:left"></div>
+    <div id="log3" style="overflow:scroll;width:400px; height:100px;background-color:#ffeeaa; margin:auto; text-align:left"></div>
+  </body>
+</html>
